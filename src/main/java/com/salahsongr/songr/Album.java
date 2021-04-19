@@ -1,11 +1,25 @@
 package com.salahsongr.songr;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Album {
-    String title;
-    String artist;
-    String songCount;
-    int length;
-    String imageUrl;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private String title;
+    private String artist;
+    private String songCount;
+    private int length;
+    private String imageUrl;
+
+    public Integer getId() {
+        return id;
+    }
+
 
     public Album() {
     }
