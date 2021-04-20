@@ -15,10 +15,10 @@ class SongrApplicationTests {
 	void testAlbumSetterAndGetter() {
 		Album alhawaSultan=new Album();
 		alhawaSultan.setArtist("George Wassof");
-		alhawaSultan.setSongCount("Helf Ala'amar");
-		alhawaSultan.setLength(394);
+		alhawaSultan.setSongCount(5);
+		alhawaSultan.setLength(2100);
 		assertEquals("George Wassof", alhawaSultan.getArtist());
-		assertEquals("Helf Ala'amar",alhawaSultan.getSongCount());
-		assertEquals(394,alhawaSultan.getLength());
+		assertEquals(5,alhawaSultan.getSongCount());
+		assertEquals(2100,alhawaSultan.getLength());
 	}
 }
