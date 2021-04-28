@@ -32,6 +32,15 @@ public class Album {
         this.imageUrl = imageUrl;
     }
 
+    public Album(String title, String artist, int songCount, int length, String imageUrl, List<Song> songs) {
+        this.title = title;
+        this.artist = artist;
+        this.songCount = songCount;
+        this.length = length;
+        this.imageUrl = imageUrl;
+        this.songs = songs;
+    }
+
     public String getTitle() {
         return title;
     }

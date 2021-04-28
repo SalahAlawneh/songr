@@ -10,10 +10,10 @@
 </head>
 <body>
 <h1>Hello to Songr web site:</h1>
-<h1><a href="/addAlbum">Add album ==></a></h1>
+<h1>to add song to the album just click on the image of the Album ==></h1>
 <section class="gridContainer">
     <div th:each="album:${album}" class="card">
-        <img th:src="${album.imageUrl}">
+        <a th:href="'albums/'+${album.id}"><img th:src="${album.imageUrl}"></a>
 
         <div class="container">
             <h1 th:text="${album.title}"></h1>
@@ -23,6 +23,22 @@
 
         </div>
     </div>
+    <hr>
+    <hr>
+    <form action="/addAlbum" method="post">
+        <label>Add title</label>
+        <input type="text" name="title">
+        <label>Add artist</label>
+        <input type="text" name="artist">
+        <label>Add songCount</label>
+        <input type="text" name="songCount">
+        <label>length of song in second</label>
+        <input type="text" name="length">
+        <label>Add imageUrl</label>
+        <input type="text" name="imageUrl">
+        <input type="submit" value="add the album">
+
+    </form>
 </section>
 </body>
 </html>

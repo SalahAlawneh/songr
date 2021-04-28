@@ -19,11 +19,18 @@ public class Song {
     public Song() {
     }
 
-    public Song(String title, int length, int trackNumber, Album album) {
+    public Album getAlbum() {
+        return album;
+    }
+
+    public void setAlbum(Album album) {
+        this.album = album;
+    }
+
+    public Song(String title, int length, int trackNumber) {
         this.title = title;
         this.length = length;
         this.trackNumber = trackNumber;
-        this.album = album;
     }
 
     public Integer getId() {
